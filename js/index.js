@@ -2,40 +2,40 @@ $(document).ready(function() {
 
 //When user inputs city name and clicks submit, show pix for that city.
 
-$('#submit-btn').click(showCityPix);
-event.preventDefault();
+$('form').submit(showCityPix);
 
 
 function showCityPix() {
-	
- console.log(is this working);
+event.preventDefault();
 
- var = "var city"
+ 	console.log("is this working");
 
- if ('var city' == "NYC") {
- 	$('#city-type').val(NYC);
- } else if ('var city' =="New York City");{
- 	$('#city-type').val(New York City); {
- } else if ('var city' == "New York"); {
- 	$('#city-type').val(New York);
- 	}
- } 
+ 	var varcity = $('#city-type').val();
 
- }
+//If user inputs NYC || New York City || New York, then show 'nyc' pix.
+//If user inputs SF || San Francisco || Bay Area, then show 'sf' pix.
+//If user inputs LA || Los Angeles || LAX, then show 'la' pix
+//If user inputs Austin || ATX ||, then show 'austin' pix
+//If user inputs Sydney || SYD, then show 'sydney' pix
 
-	a = $('').addClass('.nyc');
-	b = $().addClass('.sf');
-	c = $().addClass('la');
-	d = $().addClass('.austin');
-	e = $().addClass('.sydney');
+	if (varcity == "NYC" || varcity == "New York City" || varcity == "New York") {
+ 	$('body').addClass('nyc'); 
 
-	
-}
+ 	} else if (varcity == "San Francisco" || varcity == "SF" || varcity == "Bay Area") {
+ 	$('body').addClass('sf'); 
 
- 
+ 	} else if (varcity == "LA" || varcity == "Los Angeles" || varcity == "LAX") {
+ 	$('body').addClass('la'); 
 
+ 	} else if (varcity == "Austin" || varcity == "ATX") {
+ 	$('body').addClass('austin'); 
 
+ 	} else if (varcity == "Sydney" || varcity == "SYD") {
+ 	$('body').addClass('sydney');
+
+ 	} else 
+ 	$('body').removeClass();
+
+}  
 
 });
-
-
