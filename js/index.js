@@ -19,23 +19,24 @@ event.preventDefault();
 //If user inputs Sydney || SYD, then show 'sydney' pix
 
 	if (varcity == "NYC" || varcity == "New York City" || varcity == "New York") {
- 	$('body').addClass('nyc'); 
+ 	$('body').addClass('nyc');
+  // By adding classes without removing the ones prior, you arent able to type a new city and get a new background
 
  	} else if (varcity == "San Francisco" || varcity == "SF" || varcity == "Bay Area") {
- 	$('body').addClass('sf'); 
+ 	$('body').addClass('sf');
 
  	} else if (varcity == "LA" || varcity == "Los Angeles" || varcity == "LAX") {
- 	$('body').addClass('la'); 
+ 	$('body').addClass('la');
 
- 	} else if (varcity == "Austin" || varcity == "ATX") {
- 	$('body').addClass('austin'); 
+ 	} else if (varcity == "Austin" || varcity == "ATX"){
+ 	$('body').addClass('austin');
 
- 	} else if (varcity == "Sydney" || varcity == "SYD") {
+ 	} else if (varcity == "Sydney" || varcity == "SYD"){
  	$('body').addClass('sydney');
 
- 	} else 
+ 	} else
  	$('body').removeClass();
 
-}  
+  }
 
 });
